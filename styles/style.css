@@ -1,0 +1,99 @@
+*::after,*::before,*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}   
+
+body{
+  overflow: hidden;
+}
+
+.plane-one{
+  /* display: none; */
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../images/runway111.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  z-index: 2;
+}
+
+.plane-img {
+   position: absolute;
+   width: 100%;
+   margin: 0 auto;
+   top: 200px;
+   text-align: center;
+   animation: plane 5s ease 0s infinite;
+   animation-fill-mode: forwards;
+   -webkit-animation: plane 5s ease 0s infinite;
+}
+
+.plane-img img{
+  width: 80px;
+}
+
+
+
+@keyframes plane {
+  0%{
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    top: 200px;
+    text-align: center;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+  25%{
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    top: 205px;
+    text-align: center;
+}
+  50%{
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+  75%{
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+  100%{
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    top: -200px;
+    text-align: center;
+    transform: scale(3);
+    -webkit-transform: scale(3);
+    -moz-transform: scale(3);
+    -ms-transform: scale(3);
+    -o-transform: scale(3);
+}
+} 
+
+
+
+.plane-two{
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 1;
+  background-color: #9f9f9f;
+  background-image: url(../images/runway-markings.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
