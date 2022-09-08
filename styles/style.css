@@ -20,24 +20,60 @@ body{
   z-index: 2;
 }
 
-.plane-img {
+.plane-one-img {
    position: absolute;
    width: 100%;
    margin: 0 auto;
    top: 200px;
    text-align: center;
-   animation: plane 5s ease 0s infinite;
+   animation: plane-one 5s ease 0s infinite;
    animation-fill-mode: forwards;
-   -webkit-animation: plane 5s ease 0s infinite;
+   -webkit-animation: plane-one 5s ease 0s infinite;
 }
 
-.plane-img img{
+.plane-one-img img{
   width: 80px;
 }
 
+.btn{
+   position: absolute;
+   cursor: pointer;
+   width: 150px;
+   height: 35px;
+   bottom: 50px;
+   right: 100px;
+   border: none;
+   border-radius: 10px;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   -ms-border-radius: 10px;
+   -o-border-radius: 10px;
+   color: #fff;
+   font-weight: 700;
+   letter-spacing: 3px;
+   animation: clr 3s linear infinite;
+   -webkit-animation: clr 3s linear infinite;
+}
 
+@keyframes clr {
+  0%{
+    background: rgb(9, 116, 209);
+  }
+  25%{
+    background:  rgb(7, 65, 211) ;
+  }
+  50%{
+    background: rgb(9, 116, 209);
+  }
+  75%{
+    background:  rgb(7, 65, 211) ;
+  }
+  100%{
+    background: rgb(9, 116, 209);
+  }
+}
 
-@keyframes plane {
+@keyframes plane-one {
   0%{
     position: absolute;
     width: 100%;
@@ -83,17 +119,195 @@ body{
 }
 } 
 
-
-
-.plane-two{
-  display: none;
+.plane{
   width: 100vw;
   height: 100vh;
-  position: absolute;
-  z-index: 1;
   background-color: #9f9f9f;
   background-image: url(../images/runway-markings.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
+}
+
+.btn{
+  position: absolute;
+  cursor: pointer;
+  width: 150px;
+  height: 35px;
+  bottom: 50px;
+  right: 100px;
+  border: none;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 3px;
+  animation: clr 3s linear infinite;
+  -webkit-animation: clr 3s linear infinite;
+}
+
+
+@keyframes clr {
+ 0%{
+   background: rgb(9, 116, 209);
+ }
+ 25%{
+   background:  rgb(7, 65, 211) ;
+ }
+ 50%{
+   background: rgb(9, 116, 209);
+ }
+ 75%{
+   background:  rgb(7, 65, 211) ;
+ }
+ 100%{
+   background: rgb(9, 116, 209);
+ }
+}
+
+.plane-img img{
+  position: absolute;
+  top: 301px;
+  left: 22px;
+  width: 100px;
+  transform: rotate(90deg);
+  animation: plane 7s linear .5s infinite;
+  -webkit-animation: plane 7s linear .5s infinite;
+}
+
+@keyframes plane {
+  0%{
+    position: absolute;
+    top: 301px;
+    left: 22px;
+    width: 100px;
+    transform: rotate(90deg);
+  }
+
+  100%{
+    position: absolute;
+    top: 301px;
+    left: 98%;
+    width: 100px;
+    transform: rotate(90deg);
+  }
+}
+
+.plane-three{
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../images/bigstock-Blue-sky-24967379.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+
+.back{
+  bottom: 50px;
+  left: 100px;
+}
+
+.plane-three-img img{
+  position: absolute;
+  top: 0;
+  left: -10em;
+  width: 150px;
+  z-index: 3;
+  animation: plane-three 5s linear 1s infinite;
+  -webkit-animation: plane-three 5s linear 1s infinite;
+}
+
+.cloud-img{
+  position: absolute;
+  left: -70em;
+  top: 50px;
+  z-index: 0;
+  animation: cloud 80s linear 1s infinite;
+  -webkit-animation: cloud 80s linear 1s infinite;
+}
+
+.cloud-img-two{
+  position: absolute;
+  top: -200px;
+  z-index: 1;
+  transform: rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+}
+
+@keyframes clr {
+ 0%{
+   background: rgb(9, 116, 209);
+ }
+ 25%{
+   background:  rgb(7, 65, 211) ;
+ }
+ 50%{
+   background: rgb(9, 116, 209);
+ }
+ 75%{
+   background:  rgb(7, 65, 211) ;
+ }
+ 100%{
+   background: rgb(9, 116, 209);
+ }
+}
+
+@keyframes cloud {
+  0%{
+    position: absolute;
+    left: -70em;
+    top: 50px;
+  }
+
+  100%{
+    position: absolute;
+    left: 200%;
+    top: 50px;
+  }
+}
+
+@keyframes plane-three {
+  0%{
+  position: absolute;
+  top: 30em;
+  left: -10em;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+}
+  25%{
+    position: absolute;
+    top: 17em;
+  }
+  50%{
+    position: absolute;
+    top:5em;
+  }
+  60%{
+    position: absolute;
+    top:4.5em;
+  }
+  75%{
+    position: absolute;
+    top: 5em;
+  }
+  100%{
+    position: absolute;
+    top: 10em;
+    left: 100em;
+    transform: scale(2.5);
+    -webkit-transform: scale(2.5);
+    -moz-transform: scale(2.5);
+    -ms-transform: scale(2.5);
+    -o-transform: scale(2.5);
+}
 }
